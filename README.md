@@ -51,7 +51,9 @@ sw ({condition}){
 	case 1 {
 		//case 1 code here
 	}
-	...
+	case 2 {
+		//case 2 code here
+	} 
 	def {
 		//default case
 	}
@@ -87,5 +89,5 @@ cl myClass(){
 	priv:{
 		//private methods
 	};
-}
+};
 ```
