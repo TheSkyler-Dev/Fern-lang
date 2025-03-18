@@ -82,7 +82,7 @@ cl myClass(){
 		//public methods
 	};
 	
-	prot:{
+	sec:{
 		//protected methods
 	};
 	
