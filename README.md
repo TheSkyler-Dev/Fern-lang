@@ -1,6 +1,3 @@
-# Fern-lang
-**Note: This is an initial documentation and is therefore unfinished and subject to change in the future**
-
 # What is `Fern`?
 `Fern` is a general purpose programming language with its main strengths in systems programming, AI, CLI tools and scripting, among others.
 
@@ -29,14 +26,38 @@
 	- `auto` garbage collection
 - `#MULTIDISP` specify wether multiple dispatch should be allowed (disabled by default). `allow` enables multiple dispatch
 
-### data types
+## Variables
+### Data Types
 - `str` String
 - `int` Integer
 - `db` Double precision floating point
 - `bool` Boolean
 - `ul` Unsigned long interger
 
-### namespaces
+### More on variables
+Variables in `Fern` aren't directly nullable for memory safety. It is generally good practice to initialize variables as they're declared. Recommended default values for varables, including one that kinda works like assigning null to a numeric variable are:
+
+`int` or `db`:
+- `NaN`
+- `0`
+- `0.0`
+
+`str`:
+- `"def"`
+- `"default"`
+
+Variables of types `bool` or `ul` should be assigned the value `false` or `0l` respectively as defaults, unless required otherwise by your project.
+
+**Syntax example: declaring a variable**
+```Fern
+str myString = "def";
+int myInt = 0;
+db myDouble = 0.0;
+bool myBool = false;
+ul myUlong = 0l;
+```
+
+### Namespaces
 The standard namespace is `frn::`. Any standard libraries included with `Fern` can be called with either `frn::` or  the library's own namespace.
 
 ### `Fern` comments
@@ -51,9 +72,7 @@ sw ({condition}){
 	case 1 {
 		//case 1 code here
 	}
-	case 2 {
-		//case 2 code here
-	} 
+	...
 	def {
 		//default case
 	}
@@ -82,12 +101,12 @@ cl myClass(){
 		//public methods
 	};
 	
-	sec:{
+	prot:{
 		//protected methods
 	};
 	
 	priv:{
 		//private methods
 	};
-};
+}
 ```
