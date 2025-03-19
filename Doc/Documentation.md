@@ -43,8 +43,8 @@
 	- `auto` garbage collection
 - `#MULTIDISP` specify wether multiple dispatch should be allowed (disabled by default). `allow` enables multiple dispatch
 
-### Syntax conventions
-`Fern` follows common code conventions seen in languages like C++ and Rust. While not strictly enforced (you generally can use `tab` for indentation), It is generally recommended to use four spaces per indentation rather than `tab`, as per [Google's style guidelines](https://tinyurl.com/42h9tfy8)
+### Syntax and style conventions
+`Fern` follows common code conventions seen in languages like C++ and Rust. While not strictly enforced (you generally can use `tab` for indentation), It is generally recommended to use four spaces per indentation rather than `tab`, as per [Google's style guidelines](https://tinyurl.com/42h9tfy8). Each statement must end with a semicolon (`;`). variable, function and calss names are strictly case sensitive. For Class names, `PascalCase` should be used, while function and variable names should either adhere to `camelCase`. The use of `kebab-case` or `snake_case` in function or variable names can be done when necessary, depending on the context.
 ## Variables
 ### Data Types
 - `str` String
@@ -52,6 +52,8 @@
 - `db` Double precision floating point
 - `bool` Boolean
 - `ul` Unsigned long interger
+
+Note that variables of type `db` support double precision floating points with up to 16 decimal positions, as well as subnormal floating points.
 
 ### More on variables
 Variables in `Fern` aren't directly nullable for memory safety. It is generally good practice to initialize variables as they're declared. Recommended default values for varables, including one that kinda works like assigning null to a numeric variable are:
@@ -119,6 +121,9 @@ The standard namespace is `frn::`. Any standard libraries included with `Fern` c
 ### `Fern` comments
 - `//` Normal comment
 - `/*...*/` Multiline comment
+
+## Loops
+`Fern` supports your usual types of loops: `while`-loops, `do ... while` loops, `for` loops. In `Fern`, these essentially work the same as in C++
 
 ### Control flow
 - `if`, `elif`, `else`
@@ -190,7 +195,7 @@ catch {
     throw(frn::err(int err = ecode(); msg("Error message", pref(err)));
 }
 ```
-Note that the `frn::` namespace is only called on `err`. `Fern` has the unique feature where the namespace is inferred for every element within a standard funtion, in this case the `err()` function. This reduces verbosity, but you can optionally call the namespace on every element within the function. If you call a function from a different namespace, for example for 3rd party libraries, you have to explicitly call its functions within a standard function.
+Note that the `frn::` namespace is only called on `err`. `Fern` has the unique feature where the namespace is inferred for every element within a standard funtion, in this case the `err()` function. This reduces verbosity, but you can optionally call the namespace on every element within the function. If you call a function from a different namespace, for example for 3rd party libraries, you have to explicitly call its functions by the namespace of the 3rd party library within a standard function.
 
 ## Syntax highlighting
 
@@ -203,7 +208,7 @@ Note that the `frn::` namespace is only called on `err`. `Fern` has the unique f
 - Function names: steel blue (#4682B4)
 - Class names: light steel blue (#B0C4DE)
 - Data types: Lavender (#E6E6FA)
-- Unused variables: Navy Gray (#656B83)
+- Unused variables and functions: Navy Gray (#656B83)
 
 `Fern` also resolves invisible characters:
 - Zero-Width Space: `<ZWSP>` (red (#FF0000) line (looks like a pipe))
