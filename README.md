@@ -27,7 +27,7 @@
 - `#MULTIDISP` specify wether multiple dispatch should be allowed (disabled by default). `allow` enables multiple dispatch
 
 ### Syntax conventions
-`Fern` follows common code conventions seen in languages like C++ and Rust. While not strictly enforced (you generally can use `tab` for indentation), It is generally recommended to use four spaces per indentation rather than `tab`, as per [Google's style guidelines](https://tinyurl.com/42h9tfy8)
+`Fern` follows common code conventions seen in languages like C++ and Rust. While not strictly enforced (you generally can use `tab` for indentation), It is generally recommended to use four (4) spaces per indentation rather than `tab`, as per [Google's style guidelines](https://tinyurl.com/42h9tfy8)
 ## Variables
 ### Data Types
 - `str` String
@@ -173,7 +173,7 @@ catch {
     throw(frn::err(int err = ecode(); msg("Error message", pref(err)));
 }
 ```
-Note that the `frn::` namespace is only called on `err`. `Fern` has the unique feature where the namespace is inferred for every element within a standard funtion, in this case the `err()` function. This reduces verbosity, but you can optionally call the namespace on every element within the function. If you call a function from a different namespace, for example for 3rd party libraries, you have to explicitly call its functions within a standard function.
+Note that the `frn::` namespace is only called on `err`. `Fern` has the unique feature where the namespace is inferred for every element within a standard funtion, in this case the `err()` function. This reduces verbosity, but you can optionally call the namespace on every element within the function. If you call a function from a different namespace, for example for 3rd party libraries, you have to explicitly call its functions by the namespace of the 3rd party library within a standard function.
 
 ## Syntax highlighting
 
