@@ -204,13 +204,14 @@ Note that the `frn::` namespace is only called on `err`. `Fern` has the unique f
 - Keywords (`fn`, `cl`, etc.): Persian pink (#F77FBE)
 - Variables and constants : white #FFFFFF(dark mode), black #000000 (light mode)
 - Strings: Salmon red (#FA8072)
-- Template literals (`$`, `${}`) Yellow (#FFFF00)
+- Template literals (`$`, `${}`) Dark magenta (#8B008B)
 - Function names: steel blue (#4682B4)
 - Class names: light steel blue (#B0C4DE)
 - Data types: Lavender (#E6E6FA)
 - Unused variables and functions: Navy Gray (#656B83)
 
 `Fern` also resolves invisible characters:
-- Zero-Width Space: `<ZWSP>` (red (#FF0000) line (looks like a pipe))
-- Whitespace: `<WSPACE>` (orange (#FFA500) background and underline)
-- EM Space: `<EM>` (fluorescent yellow (#CCFF00) background and underline)
+- Zero-Width Space: `<ZWSP>` (red (#FF0000) translucentbackground)
+- Whitespace: `<WSPACE>` (orange (#FFA500) translucent background and underline)
+- EM Space: `<EM>` (fluorescent yellow (#CCFF00) translucent background and underline)
+- Exessive indentation (`tab`or `spce`): unresolved (translucent yellow (#FFFF00) background)
