@@ -1,3 +1,6 @@
+![Static Badge](https://img.shields.io/badge/Status-early%20development-yellow?style=flat)
+![Static Badge](https://img.shields.io/badge/License-GNU%20GPL_3.0-blue?style=flat)
+___
 # What is `Fern`?
 `Fern` is a general purpose programming language with its main strengths in systems programming, AI, CLI tools and scripting, among others.
 
