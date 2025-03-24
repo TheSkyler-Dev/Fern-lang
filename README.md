@@ -76,6 +76,43 @@ bool myBool = false;
 ul myUlong = 0l;
 ```
 
+## Basic Arithmetic
+Mathematical operations in `Fern` are very straight forward and includes the following operators:
+- **`+`**: Addition
+- **`-`**: Subtraction
+- **`/`**: Division
+- **`*`**: Multiplication
+- **`%`**: Modulo
+- **`!`**: Factorial
+
+Here are some example of their usage:
+
+```Fern
+frn::out(16 + 16);
+frn::out(16 - 8);
+frn::out(32 / 2);
+frn::out(10 * 10);
+frn::out(1024 % 8);
+frn::out(5!);
+```
+Note that  it is recommended to put spaces between the operands and operators for better readability. In the case of a factorial, there should never be a space between the number and the factorial (`!`) operator. More advanced operators like Exponentation, (square) roots and constants are included in the standard `math` library.
+
+### The `math` library
+The standard `math` includes useful constant and advanced operators like:
+
+**constants**:
+- **`pi`**: represents π constant
+- **`eul`**: represents Euler's constant
+- **`inum`**: represents the imaginary unit
+- **`tau`**: represents the τ constant representing a full rotation around a circle in radians
+
+**Operators/Functions**:
+- **`**`**: Exponentation (alias for the `exp()` function)
+- **`sqrt()`**: Used to calculate square roots of numbers or expressions
+- **`nrt()`**: Non square root. The factorn has to be defined as the first number int the parentheses, followed by the expression, separated by a comma
+- **`sin()`**: Calculates sine of the value passed to it
+- **`cos()`**: Calculates cosine of the value passed to it
+
 ## Data structures
 `Fern` supports various data structures such as Arrays `array`, Dictionaries `dict` and Object collections `col`. Object collections let you organize objects in a collection like a list, from which each object and its properties can externally be accessed. Each object within an object collection requires the keyword `obj` before the object name.
 
