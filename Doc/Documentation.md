@@ -49,7 +49,11 @@
 
 > **IMPORTANT**:
 > Both the `#incl` and `#use ... from ...` flags assume your libraries and classes are located in an `include` directory (usually a folder called `include` in your project root directory). Should you organize your external classes in a subdirectory within `include` or have them in a separate folder located in the project root directory, you can use the `#inclconfig` flag to explicitly specify the directories for your libraries and classes:
-> `#inclconfig libinclude="custom/include/path", clinclude="custom/class/path"`
+> 
+> ```Fern
+> #inclconfig libinclude="custom/include/path", clinclude="custom/class/path"
+> ```
+> 
 > This flag should appear before the `#incl` flag.  This tells `Fern`, where to fetch library or external class contents from during development and in interpreted mode. In compilation mode, it would use CMake, so the `#inclconfig` flag should be omitted in production code, since it is meant strictly for rapid prototyping and scripting.
 
 ### Syntax and style conventions
