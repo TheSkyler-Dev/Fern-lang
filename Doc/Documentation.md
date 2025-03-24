@@ -62,7 +62,7 @@
 - `bool` Boolean
 - `ul` Unsigned long integer
 
-Note that variables of type `db` support double precision floating points with up to 16 decimal positions, as well as subnormal floating points.
+Note that variables of type `db` support double precision floating points with up to 16 decimal positions, as well as subnormal floating points. Constants can be declared by using the `const` keyword before the data type.
 
 ### More on variables
 Variables in `Fern` aren't directly nullable for memory safety. It is generally good practice to initialize variables as they're declared. Recommended default values for variables, including one that kinda works like assigning null to a numeric variable are:
