@@ -33,11 +33,15 @@ ___
 
 > **IMPORTANT**:
 > Both the `#incl` and `#use ... from ...` flags assume your libraries and classes are located in an `include` directory (usually a folder called `include` in your project root directory). Should you organize your external classes in a subdirectory within `include` or have them in a separate folder located in the project root directory, you can use the `#inclconfig` flag to explicitly specify the directories for your libraries and classes:
-> `#inclconfig libinclude="custom/include/path", clinclude="custom/class/path"`
+> 
+> ```Fern
+> #inclconfig libinclude="custom/include/path", clinclude="custom/class/path"
+> ```
+> 
 > This flag should appear before the `#incl` flag.  This tells `Fern`, where to fetch library or external class contents from during development and in interpreted mode. In compilation mode, it would use CMake, so the `#inclconfig` flag should be omitted in production code, since it is meant strictly for rapid prototyping and scripting.
 
 ### Syntax and style conventions
-`Fern` follows common code conventions seen in languages like C++ and Rust. While not strictly enforced (you generally can use `tab` for indentation), It is recommended to use four (4) spaces per indentation rather than `tab`, as per [Google's style guidelines](https://tinyurl.com/42h9tfy8). Each statement must end with a semicolon (`;`). variable, function and class names are strictly case sensitive. For Class names, `PascalCase` should be used, while function and variable names should either adhere to `camelCase`. The use of `kebab-case` or `snake_case` in function or variable names can be done when necessary, depending on the context.
+`Fern` follows common code conventions seen in languages like C++ and Rust. While not strictly enforced (you generally can use `tab` for indentation), It is recommended to use four (4) spaces per indentation rather than `tab`, as per [Google's style guidelines](https://tinyurl.com/42h9tfy8). Each statement must end with a semicolon (`;`). variable, function and class names are strictly case sensitive. For Class names, `PascalCase` should be used, while function and variable names should either adhere to `camelCase`. The use of `kebab-case` or `snake_case` in function or variable names can be done when necessary, depending on the context. It is best practice to insert spaces between variable names/the value to be assigned and the assignment operator (`=`) to enhance readability.
 ## Variables
 ### Data Types
 - `str` String
@@ -46,7 +50,7 @@ ___
 - `bool` Boolean
 - `ul` Unsigned long integer
 
-Note that variables of type `db` support double precision floating points with up to 16 decimal positions, as well as subnormal floating points.
+Note that variables of type `db` support double precision floating points with up to 16 decimal positions, as well as subnormal floating points. Constants can be declared by using the `const` keyword before the data type.
 
 ### More on variables
 Variables in `Fern` aren't directly nullable for memory safety. It is generally good practice to initialize variables as they're declared. Recommended default values for variables, including one that kinda works like assigning null to a numeric variable are:
@@ -75,6 +79,43 @@ db myDouble2 = NaN;
 bool myBool = false;
 ul myUlong = 0l;
 ```
+
+## Basic Arithmetic
+Mathematical operations in `Fern` are very straight forward and includes the following operators:
+- **`+`**: Addition
+- **`-`**: Subtraction
+- **`/`**: Division
+- **`*`**: Multiplication
+- **`%`**: Modulo
+- **`!`**: Factorial
+
+Here are some example of their usage:
+
+```Fern
+frn::out(16 + 16);
+frn::out(16 - 8);
+frn::out(32 / 2);
+frn::out(10 * 10);
+frn::out(1024 % 8);
+frn::out(5!);
+```
+Note that  it is recommended to put spaces between the operands and operators for better readability. In the case of a factorial, there should never be a space between the number and the factorial (`!`) operator. More advanced operators like Exponentation, (square) roots and constants are included in the standard `math` library.
+
+### The `math` library
+The standard `math` includes useful constant and advanced operators like:
+
+**constants**:
+- **`pi`**: represents π constant
+- **`eul`**: represents Euler's constant
+- **`inum`**: represents the imaginary unit
+- **`tau`**: represents the τ constant representing a full rotation around a circle in radians
+
+**Operators/Functions**:
+- **`**`**: Exponentation (alias for the `exp()` function)
+- **`sqrt()`**: Used to calculate square roots of numbers or expressions
+- **`nrt()`**: Non square root. The factorn has to be defined as the first number int the parentheses, followed by the expression, separated by a comma
+- **`sin()`**: Calculates sine of the value passed to it
+- **`cos()`**: Calculates cosine of the value passed to it
 
 ## Data structures
 `Fern` supports various data structures such as Arrays `array`, Dictionaries `dict` and Object collections `col`. Object collections let you organize objects in a collection like a list, from which each object and its properties can externally be accessed. Each object within an object collection requires the keyword `obj` before the object name.
