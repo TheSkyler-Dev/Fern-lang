@@ -403,7 +403,7 @@ if(myStr.isEmpty()){
 
 Fern also has the `webFern` toolchain, which is specifically designed for use in web development and consists of:
 - frnFlutter/Bittern -> Native Fern-to-Dart + Flutter compiler/converter for cross platform web apps
-- FernJS -> Native Fern-to-JavaScript compiler/converter for highgly secure and resilient JavaScript code for web logic
+- FernJS -> Native Fern-to-JavaScript compiler/converter for highly secure and resilient JavaScript code for web logic
 - frnWASM -> Native Fern-to-WASM (Web Assembly) compiler/converter
 - Fern Core + `fpkg`
 - webkit+ -> A web library for web-oriented development These are designed to be resolved into Dart/JavaScript/WASM code upon compilation.
