@@ -392,3 +392,28 @@ if(myStr.isEmpty()){
 - Zero-Width Space: Resolved to `<ZWSP>` with contrast underline, Bold text
 - Whitespace: Resolved to `<WSPACE>` with contrast underline, Bold text
 - EM Space: Resolved to `<EM>` with contrast underline, Bold text
+
+## Compilers/Toolchains
+`Fern` has two native Toolchains that each serve a different purpose. The `frnTools` toolchain is the default for `Fern` and is intended for systems programming, AI, CLI tools and scripting. Here's what **`frnTools`** includes:
+
+- CFern/Mollie -> C-compiler for Fern (AOT and JIT compilation)
+- InstFrn/Aagnes -> native Fern interpreter
+- Fern Core -> Fern language core made up of a Lexer/Parser and Linter
+- FernPKG (`fpkg`) -> default Fern package manager
+
+Fern also has the `webFern` toolchain, which is specifically designed for use in web development and consists of:
+- frnFlutter/Bittern -> Native Fern-to-Dart + Flutter compiler/converter for cross platform web apps
+- FernJS -> Native Fern-to-JavaScript compiler/converter for highgly secure and resilient JavaScript code for web logic
+- frnWASM -> Native Fern-to-WASM (Web Assembly) compiler/converter
+- Fern Core + `fpkg`
+- webkit+ -> A web library for web-oriented development These are designed to be resolved into Dart/JavaScript/WASM code upon compilation.
+
+## Additional standard libraries
+Here's a list of some of the most notable standard Fern libraries, some of which may need to be installed seperately through `fpkg`:
+
+- `math` (included): Provides more advanced math functions
+- `bitset` (included): Work with binary integers, including bitwise operations
+- `palette` (included): allows printing colored and formatted output to console
+- `webkit` (install via `fpkg`): adds web capabilities to native programs, including both client- and server-side networking. Unlike `webkit+`, this library does not resolve to Dart/JavaScript or WASM.
+- `utest` (included): a simple unit testing framework
+... and many more.
