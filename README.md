@@ -409,7 +409,7 @@ Fern also has the `webFern` toolchain, which is specifically designed for use in
 - webkit+ -> A web library for web-oriented development These are designed to be resolved into Dart/JavaScript/WASM code upon compilation.
 
 ## Additional standard libraries
-Here's a list of some of the most notable standard Fern libraries, some of which may need to be installed seperately through `fpkg`:
+Here's a list of some of the most notable standard Fern libraries, some of which may need to be installed separately through `fpkg`:
 
 - `math` (included): Provides more advanced math functions
 - `bitset` (included): Work with binary integers, including bitwise operations
