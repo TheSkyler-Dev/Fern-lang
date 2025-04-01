@@ -46,7 +46,9 @@ ___
 ### Data Types
 - `str` String
 - `int` Integer (`int64` by default, can be explicitly defined otherwise with `int32`)
+	- `int32` 32-bit integer
 - `db` Double precision floating point (`db64`by default, can be set to `db32`)
+	- `db32` 32-bit double precision floating point
 - `bool` Boolean
 - `ul` Unsigned long integer
 
