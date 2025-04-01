@@ -63,7 +63,9 @@
 ### Data Types
 - `str` String
 - `int` Integer (`int64` by default, can be explicitly defined otherwise with `int32`)
+	- `int32` 32-bit integer
 - `db` Double precision floating point (`db64`by default, can be set to `db32`)
+	- `db32` 32-bit double precision floating point
 - `bool` Boolean
 - `ul` Unsigned long integer
 
@@ -427,7 +429,7 @@ Fern also has the `webFern` toolchain, which is specifically designed for use in
 - webkit+ -> A web library for web-oriented development These are designed to be resolved into Dart/JavaScript/WASM code upon compilation.
 
 ## Additional standard libraries
-Here's a list of some of the most notable standard Fern libraries, some of which may need to be installed seperately through `fpkg`:
+Here's a list of some of the most notable standard Fern libraries, some of which may need to be installed separately through `fpkg`:
 
 - `math` (included): Provides more advanced math functions
 - `bitset` (included): Work with binary integers, including bitwise operations
