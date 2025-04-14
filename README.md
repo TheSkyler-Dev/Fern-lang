@@ -419,3 +419,7 @@ Here's a list of some of the most notable standard Fern libraries, some of which
 - `webkit` (install via `fpkg`): adds web capabilities to native programs, including both client- and server-side networking. Unlike `webkit+`, this library does not resolve to Dart/JavaScript or WASM.
 - `utest` (included): a simple unit testing framework
 ... and many more.
+
+## Contributing to `Fern`
+First off, thank you for considering contributing to `Fern`.
+Your contributions are greatly appreciated, but before you start, please read **[CONTRIBUTING.md](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/CONTRIBUTING.md)** and make sure to follow the [Code of Conduct]().
