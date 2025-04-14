@@ -26,6 +26,9 @@ LBRACE: '{';
 RBRACE: '}';
 LBRACKET: '[';
 RBRACKET: ']';
+INCREMENT: '++';
+DECREMENT: '--';
+ELVIS: '?:';
 WS: [ \t\r\n]+ -> skip;
 COMMENT: '//' ~[\r\n]* -> skip;
 MULTILINE_COMMENT: '/*' .*? '*/' -> skip;
@@ -49,7 +52,7 @@ statement: variableDeclaration
 
 variableDeclaration: dataType IDENTIFIER ASSIGN expression SEMICOLON;
 
-dataType: 'str' | 'int' | 'db' | 'bool' | 'ul';
+dataType: 'str' | 'int' | 'int32' | 'db' | 'db32' | 'bool' | 'ul';
 
 expression: primaryExpression (arithmeticOperator primaryExpression)*;
 
@@ -59,7 +62,8 @@ primaryExpression: NUMBER
                  | NIL
                  | NAN
                  | IDENTIFIER
-                 | templateLiteral;
+                 | templateLiteral
+                 | LPAREN expression RPAREN;
 
 arithmeticOperator: PLUS | MINUS | MULT | DIV | MOD | FACTORIAL;
 
@@ -108,3 +112,8 @@ asyncBlock: 'desync' functionDeclaration 'resync';
 errorHandling: 'try' LBRACE statement* RBRACE 'catch' LBRACE throwStatement RBRACE;
 
 throwStatement: 'throw' LPAREN 'frn::err' LPAREN 'int' IDENTIFIER ASSIGN 'ecode' LPAREN RPAREN SEMICOLON 'msg' LPAREN STRING (COMMA IDENTIFIER)? RPAREN RPAREN RPAREN SEMICOLON;
+
+// Additional rules for advanced syntax
+incrementDecrement: IDENTIFIER (INCREMENT | DECREMENT);
+
+elvisOperator: expression ELVIS expression;
