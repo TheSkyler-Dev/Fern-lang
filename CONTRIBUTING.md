@@ -43,6 +43,21 @@ This section guides you through submitting an enhancement suggestion for Fern-la
 - **Explain why this enhancement would be useful** to most Fern-lang users.
 - **Include any relevant examples or context** that would help illustrate the enhancement.
 
+### Contributing to the ANTLR Grammar
+
+Contributions to Fern's ANTLR grammar are welcome! This section outlines specific guidelines for modifying or extending the grammar.
+
+#### Guidelines for Grammar Contributions
+- **Understand the existing grammar**: Familiarize yourself with the current grammar to ensure consistency with its structure and style.
+- **Follow ANTLR best practices**: Ensure your changes align with [ANTLR best practices](https://github.com/antlr/antlr4/blob/master/doc/index.md).
+- **Preserve readability**: Write clear and meaningful rule names, and include comments where necessary.
+- **Test your changes**: Update or add tests to confirm that your grammar modifications behave as expected.
+
+#### Before Submitting Grammar Changes
+- **Run grammar validation tools**: Ensure no grammatical or syntax errors are introduced.
+- **Update documentation**: If your grammar changes impact Fern's syntax or features, update any relevant documentation.
+- **Check compatibility**: Ensure that the grammar changes are compatible with existing Fern codebase features.
+
 ### Pull Requests
 
 #### Before Submitting A Pull Request
@@ -51,6 +66,7 @@ This section guides you through submitting an enhancement suggestion for Fern-la
 - **Follow the coding style** used by the project.
 - **Include tests** that cover your changes.
 - **Ensure the test suite passes** and your code is linted.
+- If you're contributing to the ANTLR grammar, include test cases that cover the new rules or changes introduced.
 
 #### Submitting A Pull Request
 
@@ -65,6 +81,7 @@ This section guides you through submitting an enhancement suggestion for Fern-la
 
 - **Use the present tense** ("Add feature" not "Added feature").
 - **Use the imperative mood** ("Move cursor to..." not "Moves cursor to...").
+- For grammar changes, use a prefix like `Grammar:` in your commit message (e.g., `Grammar: Add support for ternary operator`).
 - **Limit the first line to 72 characters or less**.
 - **Reference issues and pull requests** liberally after the first line.
 
@@ -73,6 +90,8 @@ This section guides you through submitting an enhancement suggestion for Fern-la
 - Follow the style conventions of Rust, C++, and Swift where applicable.
 - Ensure your code is well-documented and comments are clear and concise.
 - Write tests for new features or bug fixes to ensure code quality.
+- Follow ANTLR-specific conventions for grammar files (e.g., naming rules in lowercase for lexer rules and PascalCase for parser rules).
+- Ensure your grammar rules are modular and reusable wherever possible.
 
 ## License
 
