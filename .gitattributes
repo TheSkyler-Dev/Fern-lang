@@ -2,5 +2,7 @@
 *.frn linguist-language=Fern
 *.fnl linguist-language=Fern
 
+*.cpp linguist-vendored
+*.g4 linguist-vendored
 Grammar/* linguist-vendored
 Tests/* liguist-vendored
