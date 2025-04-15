@@ -17,6 +17,18 @@ ___
 - `Fern` is interoperable with C++ and Rust and their libraries
 - `Fern` discards unused components when compiled, reducing overhead
 
+## ⚠️ Not Recommended for Beginners
+
+`Fern` is **not recommended as a first programming language** for individuals new to programming. The language is designed with experienced developers in mind who already understand fundamental programming concepts and paradigms. 
+
+Here's why `Fern` may be challenging for beginners:
+- Multiple memory management options require understanding of different memory paradigms
+- The flexibility between AOT, JIT, and interpretation assumes prior knowledge of compilation methods
+- Advanced features like pointers, references, and explicit asynchronous programming require solid programming foundations
+- The syntax, while concise, assumes familiarity with similar languages like Rust and C++
+
+If you're just starting your programming journey, we recommend beginning with languages specifically designed for education (like Python, JavaScript, or Go), and then exploring `Fern` once you've gained experience with programming fundamentals.
+
 ## `Fern` syntax at a glance
 ### configuration flags
 - `#incl` Used to include libraries
