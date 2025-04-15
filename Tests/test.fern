@@ -1,0 +1,7 @@
+#config debug=true;
+int x = 42;
+x + 10;
+db32 y = 32.8;
+str myExpr = "Expression is ${y * 10}";
+frn::out(myExpr);
+
