@@ -292,3 +292,7 @@ expect db data = fetchData();
 ---
 
 This grammar specification provides a comprehensive guide to the syntax and structure of the `Fern` language.
+
+---
+
+:copyright: **TheSkyler-Dev, Documentation licensed under CC BY-SA 4.0 International**
