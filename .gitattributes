@@ -1,3 +1,6 @@
 *.fern linguist-language=Fern
 *.frn linguist-language=Fern
 *.fnl linguist-language=Fern
+
+Grammar/* linguist-vendored
+Tests/* liguist-vendored
