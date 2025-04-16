@@ -21,7 +21,7 @@
 - [Compilers/Toolchains](#compilerstoolchains)
 
 # What is `Fern`?
-`Fern` is a general purpose programming language with its main strengths in systems programming, AI, CLI tools and scripting, among others.
+`Fern` is a general purpose programming language with its main strengths in systems programming, CLI tools and scripting, among others.
 
 ## The `Fern` philosophy
 `Fern` is designed to be concise, easy to read, lightweight and flexible. Its syntax is inspired by Rust, C++ and, to some extent, Swift. `Fern`'s support for Ahead-of-time (AOT) and interpretation is intended to provide usage-dependent flexibility, such as using interpretation for rapid prototyping or scripting. `Fern` emphasizes memory and type safety with multiple  kinds of memory managements, such as manual, reference counting and garbage collection, specifiable by the developer. That way, `Fern` is versatile for many applications! An intuitive, yet robust programming language.
