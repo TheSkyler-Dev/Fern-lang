@@ -14,6 +14,10 @@ This project and everyone participating in it is governed by the [Fern-lang Code
 
 This section guides you through submitting a bug report for Fern-lang. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
 
+- **Use the bug report template:** When reporting a bug, use the bug report template provided. It ensures all required details are included and helps maintainers address the issue efficiently.
+- **Use the feature request template:** When suggesting an enhancement, use the feature request template provided to ensure all necessary context and details are included.
+- **Use the custom issue template:** When submitting any other type of issue.
+
 #### Before Submitting A Bug Report
 
 - **Check the [issues](https://github.com/TheSkyler-Dev/Fern-lang/issues) for existing issues** to avoid duplicates.
@@ -74,6 +78,7 @@ Contributions to Fern's ANTLR grammar are welcome! This section outlines specifi
 - **Link to any related issues** in the PR description.
 - **Explain the purpose of the PR** and include any relevant context.
 - **Ensure your commits are well-organized** and follow the project's commit message guidelines.
+- **Use the pull request template:** Make sure to fill out the pull request template to provide all the required information, such as the purpose of the change, related issues, and tests added.
 
 ## Style Guides
 
