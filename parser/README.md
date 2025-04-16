@@ -36,7 +36,7 @@ To run the parser demo, follow these steps:
 
 ## Building the Demo (Optional)
 If you want to rebuild the demo from source, you will need:
-- ANTLR runtime for C++.
+- ANTLR runtime for C++ you can get it [here](https://github.com/antlr/antlr4/tree/master/runtime/Cpp).
 - A C++17-compatible compiler.
 - CMake for building the project.
 
@@ -63,7 +63,7 @@ frn::out("The value of z is ${z}");
 ```
 
 ## Notes
-- The ANTLR4-generated files and runtime are **not included** in this repository. If you want to regenerate the parser or lexer, you will need to set up ANTLR4 separately and use the `Fern.g4` grammar file.
+- The ANTLR4-generated files and runtime are **not included** in this repository. If you want to regenerate the parser or lexer, you will need to set up ANTLR4 separately and use the [`Fern.g4`](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/Grammar/Fern.g4) grammar file.
 
 ## Contributing
 If you encounter any issues or have suggestions for improving the demo, feel free to open an issue or submit a pull request.
