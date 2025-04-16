@@ -4,6 +4,6 @@
 
 *.cpp linguist-vendored
 *.g4 linguist-vendored
-*.txt lingust-vendored
+CMakeLists.txt lingust-vendored
 Grammar/* linguist-vendored
 Tests/* liguist-vendored
