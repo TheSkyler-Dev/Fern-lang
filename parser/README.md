@@ -12,7 +12,7 @@ The demo includes:
 
 ## File Structure
 - [`FernParserDemo.exe`](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/parser/FernParserDemo.exe) (or `FernLang` on Linux/Mac): The prebuilt binary for the parser demo.
-- `src/FernParserDemo.cpp`: The source file for the demo, showing how the parser is used.
+- [`src/FernParserDemo.cpp`](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/parser/src/FernParserDemo.cpp): The source file for the demo, showing how the parser is used. The associated `CMakeLists.txt`is located in the `src`directory as well.
 - `test.fern`: A sample `Fern` source file demonstrating various language features.
 
 ## Running the Demo
