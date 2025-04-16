@@ -24,7 +24,7 @@
 `Fern` is a general purpose programming language with its main strengths in systems programming, AI, CLI tools and scripting, among others.
 
 ## The `Fern` philosophy
-`Fern` is designed to be concise, easy to read, lightweight and flexible. Its syntax is inspired by Rust, C++ and, to some extent, Swift. `Fern`'s support for Ahead-of-time (AOT), Just-in-time (JIT) compilation, as well as interpretation is intended to provide usage-dependent flexibility, such as using interpretation for rapid prototyping or scripting. `Fern` emphasizes memory and type safety with multiple  kinds of memory managements, such as manual, reference counting and garbage collection, specifiable by the developer. That way, `Fern` is versatile for many applications! An intuitive, yet robust programming language.
+`Fern` is designed to be concise, easy to read, lightweight and flexible. Its syntax is inspired by Rust, C++ and, to some extent, Swift. `Fern`'s support for Ahead-of-time (AOT) and interpretation is intended to provide usage-dependent flexibility, such as using interpretation for rapid prototyping or scripting. `Fern` emphasizes memory and type safety with multiple  kinds of memory managements, such as manual, reference counting and garbage collection, specifiable by the developer. That way, `Fern` is versatile for many applications! An intuitive, yet robust programming language.
 
 ## The principles of `Fern` at a glance
 - `Fern` uses a flag-based configuration at the top of your source code.
@@ -40,7 +40,7 @@
 
 Here's why `Fern` may be challenging for beginners:
 - Multiple memory management options require understanding of different memory paradigms
-- The flexibility between AOT, JIT, and interpretation assumes prior knowledge of compilation methods
+- The flexibility between AOT and interpretation assumes prior knowledge of compilation methods
 - Advanced features like pointers, references, and explicit asynchronous programming require solid programming foundations
 - The syntax, while concise, assumes familiarity with similar languages like Rust and C++
 
@@ -52,7 +52,6 @@ If you're just starting your programming journey, we recommend beginning with la
 - `#use {component1, component2...} from {library}` specify library components to be used (only works on `Fern`-native libraries)
 - `#RUNMODE` specify how the code is to be run
 	- `aot` Ahead-Of-Time compilation
-	- `jit` Just-In-Time compilation
 	- `interpret` run in an interpreter
 - `#MEM` specify memory management mode
 	- `man` manual memory management (this is the default mode. the `#MEM` flag can be omitted in this case)
