@@ -11,8 +11,8 @@ The demo includes:
 - **Output Operations**: Using `frn::out` to display results.
 
 ## File Structure
-- `FernLang.exe` (or `FernLang` on Linux/Mac): The prebuilt binary for the parser demo.
-- `main.cpp`: The source file for the demo, showing how the parser is used.
+- [`FernParserDemo.exe`](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/parser/FernParserDemo.exe) (or `FernLang` on Linux/Mac): The prebuilt binary for the parser demo.
+- `src/FernParserDemo.cpp`: The source file for the demo, showing how the parser is used.
 - `test.fern`: A sample `Fern` source file demonstrating various language features.
 
 ## Running the Demo
