@@ -4,6 +4,6 @@
 
 *.cpp linguist-vendored
 *.g4 linguist-vendored
-parser/CMakeLists.txt lingust-vendored
+*.txt lingust-vendored
 Grammar/* linguist-vendored
 parser/* liguist-vendored
