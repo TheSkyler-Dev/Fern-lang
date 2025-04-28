@@ -30,4 +30,4 @@ For detailed documentation, including syntax, examples, and toolchains, visit th
 
 ## Contributing to `Fern`
 First off, thank you for considering contributing to `Fern`.
-Your contributions are greatly appreciated, but before you start, please read **[CONTRIBUTING.md](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/CONTRIBUTING.md)** and make sure to follow the [Code of Conduct]().
+Your contributions are greatly appreciated, but before you start, please read **[CONTRIBUTING.md](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/CONTRIBUTING.md)** and make sure to follow the **[Code of Conduct](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/CODE_OF_CONDUCT.md)**.
