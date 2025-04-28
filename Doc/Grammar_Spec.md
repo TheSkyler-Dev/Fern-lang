@@ -1,6 +1,6 @@
 # **Fern Grammar Specification**
 
-This document outlines the grammar rules for the `Fern` programming language, derived from the provided documentation and grammar file.
+This document outlines the grammar rules for the `Fern` programming language, derived from the provided [documentation](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/Doc/Documentation.md) and [grammar file](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/Grammar/Fern.g4).
 
 ---
 
