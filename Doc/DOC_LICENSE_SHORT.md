@@ -1,4 +1,4 @@
-Fern-lang © 2025 by TheSkyler-Dev is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+Fern-lang Documentation © 2025 by TheSkyler-Dev is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
 
 This license applies **only to the documentation** of the Fern-lang project. The core project is licensed under the [GNU GPL-3.0](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/LICENSE) license.
 
