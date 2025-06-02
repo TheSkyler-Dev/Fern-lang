@@ -1,11 +1,11 @@
-# **Fern Grammar Specification**
+# **Stingray Grammar Specification**
 
-This document outlines the grammar rules for the `Fern` programming language, derived from the provided [documentation](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/Doc/Documentation.md) and [grammar file](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/Grammar/Fern.g4).
+This document outlines the grammar rules for the `Stingray` programming language, derived from the provided [documentation](https://github.com/TheSkyler-Dev/Stingray-lang/blob/main/Doc/Documentation.md) and [grammar file](https://github.com/TheSkyler-Dev/Stingray-lang/blob/main/Grammar/Stingray.g4).
 
 ---
 
 ## **Overview**
-The `Fern` language is a general-purpose programming language designed for systems programming, AI, CLI tools, and scripting. It emphasizes concise syntax, memory safety, and flexibility, supporting multiple memory management modes and interoperability with C++ and Rust.
+The `Stingray` language is a general-purpose programming language designed for systems programming, AI, CLI tools, and scripting. It emphasizes concise syntax, memory safety, and flexibility, supporting multiple memory management modes and interoperability with C++ and Rust.
 
 ---
 
@@ -46,7 +46,7 @@ The `Fern` language is a general-purpose programming language designed for syste
 ## **Grammar Rules**
 
 ### **Program Structure**
-A `Fern` program consists of configuration flags and statements.
+A `Stingray` program consists of configuration flags and statements.
 
 ```ebnf
 program ::= (configFlag | statement)* EOF
@@ -60,7 +60,7 @@ configFlag ::= '#' IDENTIFIER (ASSIGN (STRING | IDENTIFIER | NUMBER | BOOLEAN))?
 ```
 
 Examples:
-```Fern
+```Stingray
 #incl "math";
 #RUNMODE = aot;
 #MEM = auto;
@@ -69,7 +69,7 @@ Examples:
 ---
 
 ### **Statements**
-Statements are the building blocks of a `Fern` program.
+Statements are the building blocks of a `Stingray` program.
 
 ```ebnf
 statement ::= variableDeclaration
@@ -96,7 +96,7 @@ dataType ::= 'str' | 'int' | 'int32' | 'db' | 'db32' | 'bool' | 'ul'
 ```
 
 Examples:
-```Fern
+```Stingray
 str name = "Jane";
 int age = 25;
 db pi = 3.14159;
@@ -114,7 +114,7 @@ arithmeticOperator ::= '+' | '-' | '*' | '/' | '%' | '!'
 ```
 
 Examples:
-```Fern
+```Stingray
 x + y;
 (10 * 2) / 5;
 ```
@@ -129,7 +129,7 @@ templateLiteral ::= STRING ('$' IDENTIFIER | '${' expression '}')*
 ```
 
 Example:
-```Fern
+```Stingray
 str message = "$name says that $x + $y equals ${x + y}.";
 ```
 
@@ -144,9 +144,9 @@ parameter ::= dataType IDENTIFIER
 ```
 
 Example:
-```Fern
+```Stingray
 fn greet(str name) {
-    frn::out("Hello, $name!");
+    ray::out("Hello, $name!");
 };
 ```
 
@@ -163,14 +163,14 @@ constructor ::= 'constr' COLON LBRACE statement* RBRACE
 ```
 
 Example:
-```Fern
+```Stingray
 cl Person {
     constr: {
         // Constructor code
     };
     pub: {
         fn greet() {
-            frn::out("Hello!");
+            ray::out("Hello!");
         };
     };
 };
@@ -192,21 +192,21 @@ defaultBlock ::= 'def' COLON LBRACE statement* RBRACE
 ```
 
 Examples:
-```Fern
+```Stingray
 if (x > 0) {
-    frn::out("Positive");
+    ray::out("Positive");
 } elif (x < 0) {
-    frn::out("Negative");
+    ray::out("Negative");
 } else {
-    frn::out("Zero");
+    ray::out("Zero");
 };
 
 sw (value) {
     case 1: {
-        frn::out("One");
+        ray::out("One");
     };
     def: {
-        frn::out("Default");
+        ray::out("Default");
     };
 };
 ```
@@ -214,7 +214,7 @@ sw (value) {
 ---
 
 ### **Loops**
-`Fern` supports `while`, `do-while`, and `for` loops.
+`Stingray` supports `while`, `do-while`, and `for` loops.
 
 ```ebnf
 whileLoop ::= 'while' LPAREN expression RPAREN LBRACE statement* RBRACE
@@ -223,7 +223,7 @@ forLoop ::= 'for' LPAREN variableDeclaration expression SEMICOLON expression RPA
 ```
 
 Examples:
-```Fern
+```Stingray
 while (true) {
     // Loop body
 };
@@ -240,17 +240,17 @@ for (int i = 0; i < 10; i++) {
 ---
 
 ### **I/O Operations**
-Input and output are handled using `frn::out` and `frn::in`.
+Input and output are handled using `ray::out` and `ray::in`.
 
 ```ebnf
-ioOperation ::= 'frn::out' LPAREN expression RPAREN SEMICOLON
-              | 'frn::in' LPAREN STRING RPAREN ('.req')? SEMICOLON
+ioOperation ::= 'ray::out' LPAREN expression RPAREN SEMICOLON
+              | 'ray::in' LPAREN STRING RPAREN ('.req')? SEMICOLON
 ```
 
 Examples:
-```Fern
-frn::out("Hello, World!");
-str input = frn::in("Enter your name:").req;
+```Stingray
+ray::out("Hello, World!");
+str input = ray::in("Enter your name:").req;
 ```
 
 ---
@@ -260,15 +260,15 @@ Error handling uses `try`, `catch`, and `throw`.
 
 ```ebnf
 errorHandling ::= 'try' LBRACE statement* RBRACE 'catch' LBRACE throwStatement RBRACE
-throwStatement ::= 'throw' LPAREN 'frn::err' LPAREN 'int' IDENTIFIER ASSIGN 'ecode' LPAREN RPAREN SEMICOLON 'msg' LPAREN STRING (COMMA IDENTIFIER)? RPAREN RPAREN RPAREN SEMICOLON
+throwStatement ::= 'throw' LPAREN 'ray::err' LPAREN 'int' IDENTIFIER ASSIGN 'ecode' LPAREN RPAREN SEMICOLON 'msg' LPAREN STRING (COMMA IDENTIFIER)? RPAREN RPAREN RPAREN SEMICOLON
 ```
 
 Example:
-```Fern
+```Stingray
 try {
     // Code that may throw an error
 } catch {
-    throw(frn::err(int err = ecode(); msg("Error occurred", pref(err))));
+    throw(ray::err(int err = ecode(); msg("Error occurred", pref(err))));
 };
 ```
 
@@ -282,7 +282,7 @@ asyncBlock ::= 'desync' functionDeclaration 'resync'
 ```
 
 Example:
-```Fern
+```Stingray
 desync fn fetchData() {
     // Async code
 } resync;
@@ -291,7 +291,7 @@ expect db data = fetchData();
 
 ---
 
-This grammar specification provides a comprehensive guide to the syntax and structure of the `Fern` language.
+This grammar specification provides a comprehensive guide to the syntax and structure of the `Stingray` language.
 
 ---
 
