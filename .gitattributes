@@ -1,6 +1,6 @@
-*.fern linguist-language=Fern
-*.frn linguist-language=Fern
-*.fnl linguist-language=Fern
+*.fin linguist-language=Fern
+*.sray linguist-language=Fern
+*.srl linguist-language=Fern
 
 *.cpp linguist-vendored
 *.g4 linguist-vendored
