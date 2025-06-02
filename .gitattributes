@@ -1,6 +1,6 @@
-*.fin linguist-language=Fern
-*.sray linguist-language=Fern
-*.srl linguist-language=Fern
+*.fin linguist-language=Stingray
+*.sray linguist-language=Stingray
+*.srl linguist-language=Stingray
 
 *.cpp linguist-vendored
 *.g4 linguist-vendored
