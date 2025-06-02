@@ -4,8 +4,8 @@
 
 ___
 
-# `Fern`
-`Fern` is a lightweight, modern general-purpose programming language designed for systems programming, CLI tools, and scripting.
+# `Stingray`
+`Stingray` is a lightweight, modern general-purpose programming language designed for systems programming, CLI tools, and scripting.
 
 ### Highlights
 - Concise and flexible syntax inspired by Rust, C++, and Swift.
@@ -14,13 +14,13 @@ ___
 - Support for both Ahead-of-Time (AOT) and interpreted execution.
 
 ### Quick Start
-```Fern
+```Stingray
 #RUNMODE interpret
 #MEM auto
 
 fn main(){
     str hello = "Hello, World!";
-    frn::out(hello);
+    ray::out(hello);
 }
 ```
 
@@ -28,6 +28,6 @@ fn main(){
 
 For detailed documentation, including syntax, examples, and toolchains, visit the **[Documentation](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/Doc/Documentation.md)**.
 
-## Contributing to `Fern`
-First off, thank you for considering contributing to `Fern`.
-Your contributions are greatly appreciated, but before you start, please read **[CONTRIBUTING.md](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/CONTRIBUTING.md)** and make sure to follow the **[Code of Conduct](https://github.com/TheSkyler-Dev/Fern-lang/blob/main/CODE_OF_CONDUCT.md)**.
+## Contributing to `Stingray`
+First off, thank you for considering contributing to `Stingray`.
+Your contributions are greatly appreciated, but before you start, please read **[CONTRIBUTING.md](https://github.com/TheSkyler-Dev/Stingray-lang/blob/main/CONTRIBUTING.md)** and make sure to follow the **[Code of Conduct](https://github.com/TheSkyler-Dev/Stingray-lang/blob/main/CODE_OF_CONDUCT.md)**.
