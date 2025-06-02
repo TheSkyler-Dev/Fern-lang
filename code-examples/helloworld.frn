@@ -1,8 +1,0 @@
-#RUNMODE interpret
-#MEM auto
-
-//This is an example Fern file, this does not work yet!
-fn main(){
-    str hello = "Hello, World!";
-    frn::out(hello);
-}

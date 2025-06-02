@@ -1,0 +1,8 @@
+#RUNMODE interpret
+#MEM auto
+
+//This is an example Stingray file, this does not work yet!
+fn main(){
+    str hello = "Hello, World!";
+    ray::out(hello);
+}
