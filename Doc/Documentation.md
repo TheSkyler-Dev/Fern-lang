@@ -427,7 +427,8 @@ if(myStr.isEmpty()){
 ## Compilers/Toolchains
 `Stingray` has two native Toolchains that each serve a different purpose. The `rayTools` toolchain is the default for `Stingray` and is intended for systems programming, AI, CLI tools and scripting. Here's what **`rayTools`** includes:
 
-- CStingray/Mollie -> C-compiler for Stingray (AOT and JIT compilation)
+- CStingray/Mollie -> C-compiler for Stingray (AOT compilation)
+- Quickfin/Aagnes -> Interpreter for Stingray
 - Stingray Core -> Stingray language core made up of a Lexer/Parser and Linter
 - StingrayPKG (`raypkg`) -> default Stingray package manager
 
