@@ -76,7 +76,7 @@ If you're just starting your programming journey, we recommend beginning with la
 - `int` Integer (`int64` by default, can be explicitly defined otherwise with `int32`)
 	- `int32` 32-bit integer
 - `db` Double precision floating point (`db64`by default, can be set to `db32`)
-	- `db32` 32-bit double precision floating point
+	- `db32` 32-bit floating point (designated as `db32` to maintain consistency since normal floating points don't exist as their own data type)
 - `bool` Boolean
 - `ul` Unsigned long integer
 
@@ -143,7 +143,7 @@ The standard `math` includes useful constant and advanced operators like:
 **Operators/Functions**:
 - **`**`**: Exponentation (alias for the `exp()` function)
 - **`sqrt()`**: Used to calculate square roots of numbers or expressions
-- **`nrt()`**: Non square root. The factorn has to be defined as the first number int the parentheses, followed by the expression, separated by a comma
+- **`nrt()`**: Non square root. The factor n has to be defined as the first number within the parentheses, followed by the expression, separated by a comma
 - **`sin()`**: Calculates sine of the value passed to it
 - **`cos()`**: Calculates cosine of the value passed to it
 
