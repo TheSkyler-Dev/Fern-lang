@@ -1,4 +1,4 @@
-grammar Fern;
+grammar Stingray;
 
 // Lexer rules
 CONFIG_FLAG: '#' [a-zA-Z]+;
@@ -101,8 +101,8 @@ doWhileLoop: 'do' LBRACE statement* RBRACE 'while' LPAREN expression RPAREN SEMI
 
 forLoop: 'for' LPAREN variableDeclaration expression SEMICOLON expression RPAREN LBRACE statement* RBRACE;
 
-ioOperation: 'frn::out' LPAREN expression RPAREN SEMICOLON
-           | 'frn::in' LPAREN STRING RPAREN ('.req')? SEMICOLON;
+ioOperation: 'ray::out' LPAREN expression RPAREN SEMICOLON
+           | 'ray::in' LPAREN STRING RPAREN ('.req')? SEMICOLON;
 
 pointerReference: '&' IDENTIFIER
                 | IDENTIFIER ARROW IDENTIFIER DOT IDENTIFIER LPAREN (expression (COMMA expression)*)? RPAREN;
@@ -111,7 +111,7 @@ asyncBlock: 'desync' functionDeclaration 'resync';
 
 errorHandling: 'try' LBRACE statement* RBRACE 'catch' LBRACE throwStatement RBRACE;
 
-throwStatement: 'throw' LPAREN 'frn::err' LPAREN 'int' IDENTIFIER ASSIGN 'ecode' LPAREN RPAREN SEMICOLON 'msg' LPAREN STRING (COMMA IDENTIFIER)? RPAREN RPAREN RPAREN SEMICOLON;
+throwStatement: 'throw' LPAREN 'ray::err' LPAREN 'int' IDENTIFIER ASSIGN 'ecode' LPAREN RPAREN SEMICOLON 'msg' LPAREN STRING (COMMA IDENTIFIER)? RPAREN RPAREN RPAREN SEMICOLON;
 
 // Additional rules for advanced syntax
 incrementDecrement: IDENTIFIER (INCREMENT | DECREMENT);
