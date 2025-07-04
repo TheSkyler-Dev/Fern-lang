@@ -2,6 +2,9 @@
 
 This directory contains a prebuilt binary and source file for the `Fern` parser demo. The purpose of this demo is to showcase the functionality of the lexer and parser generated from the `Fern.g4` grammar using ANTLR.
 
+##⚠️ Deprecation Notice
+As of **June 23rd, 2025, all files related to the parser demo (`FernParserDemo.exe` and `FernParserDemo.cpp`) are deprecated. This is due to `Fern` being renamed to `Stingray-lang`/`Stingray` in response to the discovery of an already existing language project named "Fern". The files linked under [File Structure](#file-structure) were created prior to this name change and therefore operate on outdated design principles and grammar specifications, since the parser libraries were generated vis ANTLR4 based on an old version of the ANTLR grammar file. The files mentioned directly in this notice will remain for archival purposes, but are no longer intended to be used.
+
 ## Features Demonstrated
 The demo includes:
 - **Configuration Flags**: Parsing `#config` directives.
